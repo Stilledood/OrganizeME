@@ -14,19 +14,40 @@ class MainWindow(QMainWindow):
 
     def __init__(self,parent=None):
         super(MainWindow,self).__init__()
-        self.resize(500,500)
+        self.setFixedSize(500,500)
+
+
+
 
 
     def SetUp(self):
         self.button=QPushButton(self)
         self.button.setText('Browse Files')
         self.button.setFixedSize(150,30)
-        self.button.move(175,400)
+        self.button.move(175,150)
+        self.button.clicked.connect(self.browseFiles)
+        self.run_button=QPushButton(self)
+        self.run_button.setEnabled(False)
+        self.run_button.setText('Run')
+        self.run_button.move(200,200)
+        self.path=QLabel(self)
+        self.path.setFixedSize(450,100)
+        self.path.move(100,200)
+        self.path.adjustSize()
 
 
-    def resizeEvent(self,event):
-        self.button.move(self.rect().center()-self.button.rect().center())
-        QMainWindow.resizeEvent(self,event)
+
+
+    def browseFiles(self):
+        self.folderpath= QtWidgets.QFileDialog.getExistingDirectory(self)
+        print(self.folderpath)
+        if len(self.folderpath[0]) > 0:
+            self.path.setText('Selected Folder:'+self.folderpath)
+            self.run_button.setEnabled(True)
+
+
+
+
 
 
 
