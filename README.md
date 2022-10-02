@@ -20,8 +20,8 @@ Available Categories:
  - - - -
  ## Screnshots
  
- 
-![organizer](https://user-images.githubusercontent.com/74854275/193455448-a8736a19-e167-4cf2-b1c6-b71ebda94c9e.jpg)
+![organizer](https://user-images.githubusercontent.com/74854275/193455619-f18e21f0-b011-43e5-bd22-6682ac06170b.jpg)
+
 
 - - - -
   ## Key Features
